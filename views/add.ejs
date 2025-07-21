@@ -1,0 +1,50 @@
+<%-include('layouts/header')-%>
+<body>
+<%-include('layouts/nav')-%>
+
+<main>
+   
+    <% if (typeof message != 'undefined' && message) { %>
+        <div class="success-message">
+            <%= message %>
+        </div>
+    <% } %>
+        
+   
+    <div class="error-message">
+        <%if(typeof errors !='undefined'){
+            for(er of errors){
+                %><p><%=er.msg%></p><%
+            }
+        }%>
+
+    </div>
+    
+    <h1>Add Page</h1>
+    <form action="/add" method="post" enctype="multipart/form-data">
+        <div>
+            <label>Slug</label>
+            <input type="text" name="slug"/>
+        </div>
+        <div>
+            <label>Image</label>
+            <input type="file" name="imFile" accept="image/*"/>
+        </div>
+        <div>
+            <label id="editor">Content</label>
+            <textarea id="editor" name="tar"></textarea>
+            <!-- Script element sourcing TinyMCE -->
+            <script type="application/javascript" src= "/tinymce/tinymce.min.js"></script>
+            <!-- Script element sourcing the TinyMCE configuration -->
+            <script type="application/javascript" src= "/js/editor.js"></script>
+        </div>
+        <div>
+            <input type="submit" value="Submit"/>
+        </div>
+       
+    </form>
+</main>
+
+</body>
+
+<%-include('layouts/footer')-%>

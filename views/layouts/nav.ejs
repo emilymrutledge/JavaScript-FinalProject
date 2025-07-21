@@ -1,0 +1,33 @@
+<header>
+    <div class="logo">
+        <img src="/uploads/cake_favicon.jpg" alt="logo">
+        <div class="tagline">Major Project - Emily Rutledge</div>
+        <% if (!loggedIn) { %>
+            <div class="login-button-container">
+                <a href="/login" class="login-button">Admin Login</a>
+            </div>
+        <% } %>
+        <% if (loggedIn) { %>
+            <div class="logout">
+                <span>Welcome, <%= user %></span> | <a href="/logout">Logout</a>
+            </div>
+        <% } %>
+    </div>
+
+    <nav class="navBar">
+        <!-- Home link always visible -->
+        <a href="/">Home</a>
+
+        <!-- Admin-created pages (always visible) -->
+        <% navPages.forEach(p => { %>
+            <a href="/page/<%= p._id %>"><%= p.slug %></a>
+        <% }) %>
+
+        <!-- Extra links for logged in users -->
+        <% if (loggedIn) { %>
+            <a href="/add">Add Page</a>
+            <a href="/edit">Edit Pages</a>
+        <% } %>
+    </nav>
+
+</header>

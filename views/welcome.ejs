@@ -1,0 +1,14 @@
+<%-include('layouts/header')-%>
+<%-include('layouts/nav')-%>
+
+<main>
+    <% if (typeof message !== 'undefined') { %>
+        <div class="success-message"><%= message %></div>
+    <% } %>
+    
+    
+    <h1>Welcome</h1>
+    <p>Hello Admin, welcome to the dashboard!</p>        
+   
+</main>
+<%-include('layouts/footer')-%>

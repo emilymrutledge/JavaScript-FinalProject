@@ -1,0 +1,16 @@
+<%- include('layouts/header') %>
+<%- include('layouts/nav') %>
+
+<main class="page-content">
+    <div class="image">
+        <img src="<%= page.imPath %>" alt="<%= page.slug %> image">
+    </div>
+
+    <h1><%= page.slug %></h1>
+
+    <div class="content-area">
+        <%- page.content %> <!-- Render HTML content as-is -->
+    </div>
+</main>
+
+<%- include('layouts/footer') %>

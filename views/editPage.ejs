@@ -1,0 +1,44 @@
+<%-include('layouts/header')-%>
+<body>
+<%-include('layouts/nav')-%>
+
+<main>
+    <% if (typeof message != 'undefined' && message) { %>
+        <div class="success-message">
+            <%= message %>
+        </div>
+    <% } %>
+    
+    <h2>Edit Page</h2>
+
+    <% if (page.imPath) { %>
+        <p>Current Image:</p>
+        <img src="<%= page.imPath %>" alt="Page Image" style="max-width: 200px;">
+    <% } %>
+
+    <form method="POST" action="/edit/<%= page._id %>" enctype="multipart/form-data">
+        <div>
+            <label>Slug:</label>
+            <input type="text" name="slug" value="<%= page.slug %>" required>
+        </div>
+        <div>
+            <label>Upload New Image (optional):</label>
+            <input type="file" name="imFile">
+        </div>
+        <div>
+            <label>Content:</label>
+            <textarea name="content" id="editor"><%= page.content %></textarea>
+                <script src="/tinymce/tinymce.min.js"></script>
+                    <script>
+                        tinymce.init({
+                            selector: '#editor'
+                        });
+                    </script>
+        </div>
+        <div>
+            <button type="submit">Update</button>
+        </div>
+    </form>
+</main>
+
+<%-include('layouts/footer')-%>

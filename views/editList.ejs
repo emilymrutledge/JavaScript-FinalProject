@@ -1,0 +1,31 @@
+<%-include('layouts/header')-%>
+<body>
+<%-include('layouts/nav')-%>
+
+<main>
+    <h2>Edit Pages</h2>
+    <table class="edit-table">
+        <thead>
+            <tr>
+                <th>Page</th>
+                <th>Manage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% pages.forEach(p => { %>
+                <tr>
+                    <td><%= p.slug %></td>
+                    <td>
+                        <a href="/edit/<%= p._id %>">Edit</a> | 
+                        <a href="/delete/<%= p._id %>" onclick="return confirm('Are you sure you want to delete this page?')">Delete</a>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>   
+</main>
+<%-include('layouts/footer')-%>
+
+
+
+

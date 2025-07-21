@@ -1,0 +1,245 @@
+body {
+    width: 90%;
+    margin: auto;
+    padding: 15px 20px;
+    background-color: #967AA1;
+}
+
+header {
+    background-color: white;
+    border: 1px solid black;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    margin: 20px;
+}
+
+.tagline {
+    text-align: center;
+    color: #540D6E;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: auto;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    color: white;
+    font-family: sans-serif; 
+    font-weight: bold;
+    font-size: 46px;
+    text-shadow: 5px 5px 4px #540D6E; 
+    font-variant: small-caps; 
+}
+
+nav {
+    background-color: #540D6E; 
+    padding: 20px 0; 
+    text-align: center;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    font-size: 20px; 
+    font-weight: bold; 
+    color: white;
+    text-decoration: none; 
+    padding: 0 40px; 
+}
+
+nav a:hover {
+    color: teal;
+}
+
+.login-button-container {
+    text-align: right;
+    padding: 20px 30px 0 0;
+}
+
+.login-button {
+    background-color: #540D6E;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.login-button:hover {
+    background-color: #3e0851;
+}
+
+.logout {
+    color: #3e0851;
+}
+
+.banner-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+
+.image img {
+    display: block;
+    width: 300px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.about-section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.about-section h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+main {
+    width: 100%; 
+    margin: auto;
+}
+
+main h2 {
+    text-align: center;
+    color: #540D6E;
+    font-family: sans-serif;
+}
+
+main p {
+    text-align: left;
+    font-size: 20px;
+}
+
+main form {
+    width: 80%;
+    padding:10px;
+}
+
+main form label {
+    display:inline-block;
+    width: 70px;
+}
+
+main form div {
+    margin: 10px;
+}
+
+main form input[type="text"], main form input[type="password"]{
+    width:125px;
+}
+
+.error-message {
+    color: #a90906;
+    padding: 12px;
+    margin: 20px auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+#formError p{
+    color:blue;
+}
+
+#authError p{
+    color:red;
+}
+
+.addMain{
+    display:block;
+}
+
+.addMain h1{
+    text-align: center;
+}
+
+.addMain form{
+    margin:auto;
+    width: 80%;
+    border: 1px solid black;
+    padding:10px;
+    height:570px;
+}
+
+.addMain label{
+    width: 150px;
+}
+
+.editor{
+    width:500px;
+}
+
+.edit-table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-size: 18px;
+}
+
+.edit-table th,
+.edit-table td {
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.edit-table th {
+    background-color: #540D6E;
+    color: white;
+}
+
+.edit-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.edit-table a {
+    color: #540D6E;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.edit-table a:hover {
+    text-decoration: underline;
+}
+
+aside{
+    text-align:center;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border: 1px solid #c3e6cb;
+    margin: 20px auto;
+    width: 80%;
+    text-align: center;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    font-weight: bold;
+    background-color: #540D6E;
+    padding: 20px 20px; 
+    font-size: 18px;
+    color: white;
+}

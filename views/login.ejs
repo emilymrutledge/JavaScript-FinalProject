@@ -1,0 +1,46 @@
+<%-include('layouts/header')-%>
+<body>
+<%-include('layouts/nav')-%>
+
+<main>
+    <% if (logoutMessage) { %>
+        <div class="success-message"><%= logoutMessage %></div>
+    <% } %>
+
+    <h1>Login</h1>
+            <form action="/login" method="post">
+                <legend>Admin Login</legend>
+                <div>
+                    <label>Username</label>
+                    <input type="text" name="user"/>
+                </div>
+
+                <div>
+                    <label>Password</label>
+                    <input type="password" name="pass"/>
+                </div>
+                
+                <div>
+                    <input type="submit" value="Login"/>
+                    <input type="reset" value="Reset"/>                
+                </div>
+                <% if (typeof errors != 'undefined' && errors != null) { %>
+                    <div class="error-message">
+                        <% for (var i = 0; i < errors.length; i++) { %>
+                            <p><%= errors[i].msg %></p>
+                        <% } %>
+                    </div>
+                <% } %>
+                
+                <% if (typeof logerror != 'undefined' && logerror != null) { %>
+                    <div class="error-message">
+                        <p><%= logerror %></p>
+                    </div>
+                <% } %>
+                               
+            </form>
+
+</body>
+</main>
+
+<%-include('layouts/footer')-%>
